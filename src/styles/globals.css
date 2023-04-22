@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family:fantasy;
+  font-family: font1;
   src: url(../../public/fonts/Dynasty\ Fantazy\ Demo.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(../../public/fonts/Mystical\ Forest.ttf);
+}
+@font-face {
+  font-family: font3;
+  src: url(../../public/fonts/Spotlight.ttf);
+}
+@font-face {
+  font-family: font4;
+  src: url(../../public/fonts/Spotlight.ttf);
 }
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -21,12 +33,6 @@
 }
 
 body {
-  font-family: fantasy;
+  font-family: font2;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
