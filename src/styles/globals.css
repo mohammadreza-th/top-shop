@@ -30,6 +30,12 @@
   font-family: font7;
   src: url(../../public/fonts/OpenSans-Regular.ttf);
 }
+
+@font-face {
+  font-family:SFProText;
+  src: url(../../public/fonts/SFProText-Regular.ttf);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -45,7 +51,8 @@
 }
 
 body {
-  font-family: font2;
+  font-family: SFProText;
+
   color: rgb(var(--foreground-rgb));
 }
 
