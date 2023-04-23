@@ -18,6 +18,18 @@
   font-family: font4;
   src: url(../../public/fonts/Spotlight.ttf);
 }
+@font-face {
+  font-family: font5;
+  src: url(../../public/fonts/POLLANA\ GIANO\ DEMO.ttf);
+}
+@font-face {
+  font-family: font6;
+  src: url(../../public/fonts/Honeybae.ttf);
+}
+@font-face {
+  font-family: font7;
+  src: url(../../public/fonts/OpenSans-Regular.ttf);
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -35,4 +47,9 @@
 body {
   font-family: font2;
   color: rgb(var(--foreground-rgb));
+}
+
+input:focus {
+  border: none;
+  outline: none;
 }
