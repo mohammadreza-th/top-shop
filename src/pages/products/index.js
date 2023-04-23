@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
+
 import PrimaryCard from "@/components/PrimaryCard";
 const products = () => {
   return (
