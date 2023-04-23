@@ -3,7 +3,7 @@ const logIn = () => {
     <div className="font-['font7'] font-bold	 flex justify-between flex-col bg-neutral-100 h-screen pb-[3vh]">
       <div className="flex justify-between flex-col  bg-white rounded-b-3xl">
         <img
-          className="m-[15vh] mx-auto w-[20vw] h-[20vw] min-w-[100px] max-w-[500px] min-h-[100px] max-h-[40px]"
+          className="m-[15vh] mx-auto w-[20vw] h-[20vw] min-w-[100px] max-w-[400px] min-h-[100px] max-h-[400px]"
           src="/images/logo.png "
           alt="logo"
         />
