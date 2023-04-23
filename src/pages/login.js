@@ -1,40 +1,47 @@
+import Button from "@/components/Button";
+import Input from "@/components/Input";
+import Link from "next/link";
+
 const logIn = () => {
   return (
-    <div className="font-['font7'] font-bold	 flex justify-between flex-col bg-neutral-100 h-screen pb-[3vh]">
-      <div className="flex justify-between flex-col  bg-white rounded-b-3xl">
-        <img
-          className="m-[15vh] mx-auto w-[20vw] h-[20vw] min-w-[100px] max-w-[400px] min-h-[100px] max-h-[400px]"
-          src="/images/logo.png "
-          alt="logo"
-        />
-        <div className="flex justify-around p-[3vh]">
-          <button className="block focus:border-b-2 px-2  focus:border-b-red-400">
-            login
-          </button>
-          <button className="block focus:border-b-2 px-2  focus:border-b-red-400">
-            sign-up
-          </button>
+    <div className="flex bg-red-400 ">
+      <div className="w-full sm:max-w-[400px] rounded-r-xl shadow-[5px_1px_6px_1px_rgba(0,0,0,0.3)] grow  font-['font7'] font-bold flex justify-between flex-col bg-neutral-100 h-screen pb-[3vh]">
+        <div className=" flex justify-between flex-col  bg-white rounded-r-xl rounded-b-3xl">
+          <img
+            className="m-[7vh] mx-auto w-[20%] min-w-[100px] max-w-[150px]"
+            src="/images/logo.png "
+            alt="logo"
+          />
+          <div className="flex justify-around ">
+            <button className="block focus:border-b-4 transition  duration-300 px-5 pb-5  focus:border-b-red-400">
+              login
+            </button>
+            <button className="block focus:border-b-4 transition  duration-300 px-5 pb-5  focus:border-b-red-400">
+              sign-up
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="flex justify-between flex-col ">
-        <div className="rounded-b-md mx-auto w-[80%] border-b-2 border-neutral-300 mb-5">
-          <label className="block text-neutral-500" htmlFor="email">
-            email
-          </label>
-          <input className=" bg-transparent " id="email" type="email" />
-        </div>
-        <div className="rounded-b-md mx-auto w-[80%] border-b-2 border-neutral-300 mb-5">
-          <label className="block text-neutral-500" htmlFor="password">
-            password
-          </label>
-          <input className=" bg-transparent " id="password" type="password" />
+        <div className="flex justify-between flex-col ">
+          <Input type="email" id="email">
+            Email
+          </Input>
+          <Input type="password" id="password">
+            Password
+          </Input>
+
+          <button className="">forgot passworde?</button>
         </div>
 
-        <button className="">forgot passworde?</button>
+        <Link href="/products">
+          <span className="mx-auto w-[90%]">
+            <Button type="primary">Login</Button>
+          </span>
+        </Link>
       </div>
-      <button className="w-full p-auto min-h-[50px] py-[3px] max-h-[70px] text-white rounded-r-full rounded-l-full bg-red-400 text-[40px] vs:text-[28px] font-['font4']">
-        Login
-      </button>
+      <h2 className="m-auto max-sm:hidden font-bold pl-3 animate-pulse text-[10vh]/[10vh] text-white">
+        Food for
+        <br /> Evrey one!
+      </h2>
     </div>
   );
 };
