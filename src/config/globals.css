@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+        font-family: font1;
+        src: url(../../public/fonts/Dynasty\ Fantazy\ Demo.ttf);
+      }
+      @font-face {
+        font-family: font2;
+        src: url(../../public/fonts/Mystical\ Forest.ttf);
+      }
+      @font-face {
+        font-family: font3;
+        src: url(../../public/fonts/Spotlight.ttf);
+      }
+      @font-face {
+        font-family: font4;
+        src: url(../../public/fonts/Spotlight.ttf);
+      }
+      @font-face {
+        font-family: font5;
+        src: url(../../public/fonts/POLLANA\ GIANO\ DEMO.ttf);
+      }
+      @font-face {
+        font-family: font6;
+        src: url(../../public/fonts/Honeybae.ttf);
+      }
+      @font-face {
+        font-family: font7;
+        src: url(../../public/fonts/OpenSans-Regular.ttf);
+      }
+      
+      @font-face {
+        font-family:SFProText;
+        src: url(../../public/fonts/SFProText-Regular.ttf);
+      }
+      
+      :root {
+        --foreground-rgb: 0, 0, 0;
+        --background-start-rgb: 214, 219, 220;
+        --background-end-rgb: 255, 255, 255;
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --foreground-rgb: 255, 255, 255;
+          --background-start-rgb: 0, 0, 0;
+          --background-end-rgb: 0, 0, 0;
+        }
+      }
+      
+      body {
+        font-family: SFProText;
+      
+        color: rgb(var(--foreground-rgb));
+      }
+      
+      input:focus {
+        border: none;
+        outline: none;
+      }
+      ::-webkit-scrollbar {
+        width: 500px;
+       display:none;
+      }
+      

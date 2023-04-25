@@ -1,7 +1,4 @@
-import StartOrderingButton from "@/components/Startorderingbutton/StartOrderingButton";
-import Layout from "@/components/Layout/Layout";
-import NoResult from "@/components/NoResult/NoResult";
-import Header from "@/components/Header/Header";
+import {Header,NoResult,Layout,StartOrderingButton} from "@/components"
 
 const history = () => {
   return (
