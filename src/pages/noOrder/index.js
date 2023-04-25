@@ -10,8 +10,8 @@ const noOrder = () => {
       <Layout >
         <Header>Orders</Header>
         <div className="flex-col justify-center items-center bg-white">
-          <NoOrder/>
-          <StartOrderingButton />
+          {/* <NoOrder/>
+          <StartOrderingButton /> */}
         </div>
       </Layout>
     </>

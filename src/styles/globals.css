@@ -60,7 +60,6 @@ input:focus {
   border: none;
   outline: none;
 }
-::-webkit-scrollbar {
-  width: 500px;
- display:none;
-}
+ ::-webkit-scrollbar {
+ /* display:none; */
+} 
