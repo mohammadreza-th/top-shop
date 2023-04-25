@@ -1,5 +1,5 @@
 
-import PrimaryCard from "@/components/PrimaryCard";
+import { PrimaryCard } from "@/components";
 const products = () => {
   return (
     <div className="min-h-screen bg-neutral-100 p-10 flex flex-col justify-between">

@@ -29,7 +29,10 @@ module.exports = {
       },
     },
     screens: {
-      vs: "300px",
+
+      ss: "200px",
+      // => @media (min-width: 640px) { ... }
+      vs: "400px",
       // => @media (min-width: 640px) { ... }
       sm: "640px",
       // => @media (min-width: 640px) { ... }
