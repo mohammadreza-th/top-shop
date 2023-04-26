@@ -32,8 +32,12 @@
 }
 
 @font-face {
-  font-family:SFProText;
+  font-family: SFProText;
   src: url(../../public/fonts/SFProText-Regular.ttf);
+}
+@font-face {
+  font-family: SFProRounded;
+  src: url(../../public/fonts/SF_Pro_Rounded.ttf);
 }
 
 :root {
@@ -60,6 +64,6 @@ input:focus {
   border: none;
   outline: none;
 }
- ::-webkit-scrollbar {
- /* display:none; */
-} 
+::-webkit-scrollbar {
+  /* display:none; */
+}
