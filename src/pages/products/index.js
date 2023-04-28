@@ -1,26 +1,27 @@
-import { PrimaryCard } from "@/components";
-import { productMaker } from "@/feature/productMaker/productMaker";
-import Link from "next/link";
+import { Layout, PrimaryCard, Input } from "@/components";
+import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
 const productsPage = () => {
-  const products = productMaker(50);
+  const products = fakeProductMaker(50);
   return (
-    <div className="min-h-screen bg-neutral-100 p-10 flex flex-col justify-between">
-      <div className="flex justify-between">
-        <div className="fa fa-car">menu</div>
-        <div className="">chart</div>
-      </div>
-      <div className="text-7xl">
-        Delicious <br />
-        food for you
-      </div>
-      <div>
-        <input placeholder="search ..." type="text" />
-      </div>
-      <div className="flex flex-col justify-between">
-        <div className="">navigation</div>
-        <div className="border-slate-800 w-full border-2 rounded-xl overflow-auto h-[50vh] mx-auto grid vs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[5%]">
-          {products.map((product) => {
-            return (
+    <Layout
+      header={
+        <div className="flex justify-between">
+          <div className="fa fa-car">menu</div>
+          <div className="">chart</div>
+        </div>
+      }
+    >
+      <div className="min-h-screen bg-neutral-100 p-10 flex flex-col justify-between">
+        <div className="text-7xl">
+          Delicious <br />
+          food for you
+        </div>
+        <Input placeholder="search ..." type="text" />
+        <div className="flex flex-col justify-between">
+          <div className="">navigation</div>
+          <div className="border-slate-800 w-full border-2 rounded-xl overflow-auto h-[50vh] mx-auto grid vs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[5%]">
+            {products.map((product) => {
+              return (
                 <PrimaryCard
                   key={product.id}
                   id={product.id}
@@ -28,13 +29,13 @@ const productsPage = () => {
                   price={product.price}
                   src={product.imgSrc}
                 />
-              
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
+        <div>Buttons</div>
       </div>
-      <div>Buttons</div>
-    </div>
+    </Layout>
   );
 };
 

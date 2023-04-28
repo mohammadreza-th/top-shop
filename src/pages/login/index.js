@@ -1,11 +1,10 @@
-import {Button,Input} from "@/components"
+import { Button, Input } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 
 const LogIn = () => {
   return (
     <div className="flex bg-red-400 ">
-    
       <div className="w-full sm:max-w-[400px] rounded-r-xl shadow-[5px_1px_6px_1px_rgba(0,0,0,0.3)] grow  font-['font7'] font-bold flex justify-between flex-col bg-neutral-100 h-screen pb-[3vh]">
         <div className=" flex justify-between flex-col  bg-white rounded-r-xl rounded-b-3xl">
           <Image
@@ -25,21 +24,18 @@ const LogIn = () => {
           </div>
         </div>
         <div className="flex justify-between flex-col ">
-          <Input type="email" id="email" >
-            Email
-          </Input>
-          <Input type="password" id="password">
-            Password
-          </Input>
+          <Input type="email" id="email" label="Email"/>
+          <Input type="password" id="password" label="Password"/>
+        
+       
 
           <button className="">forgot password?</button>
         </div>
-
-        <Link href="/products">
-          <span className="mx-auto w-[90%]">
-            <Button type="primary">Login</Button>
-          </span>
-        </Link>
+        <div className="mx-auto w-[90%] ">
+          <Link href="/products">
+            <Button type="primary">LogIn</Button>
+          </Link>
+        </div>
       </div>
       <h2 className="m-auto max-sm:hidden font-bold pl-3 animate-pulse text-[10vh]/[10vh] text-white">
         Food for

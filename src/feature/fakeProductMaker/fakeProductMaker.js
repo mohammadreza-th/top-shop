@@ -1,4 +1,4 @@
-export function productMaker(pLength) {
+export function fakeProductMaker(pLength) {
   let products = [];
   if (pLength && pLength > 0) {
     for (let i = 1; i <= pLength; i++) {
