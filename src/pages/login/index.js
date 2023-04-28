@@ -32,7 +32,7 @@ const LogIn = () => {
             Password
           </Input>
 
-          <button className="">forgot passworde?</button>
+          <button className="">forgot password?</button>
         </div>
 
         <Link href="/products">

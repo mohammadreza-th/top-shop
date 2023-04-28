@@ -1,6 +1,8 @@
-
 import { PrimaryCard } from "@/components";
-const products = () => {
+import { productMaker } from "@/feature/productMaker/productMaker";
+import Link from "next/link";
+const productsPage = () => {
+  const products = productMaker(50);
   return (
     <div className="min-h-screen bg-neutral-100 p-10 flex flex-col justify-between">
       <div className="flex justify-between">
@@ -17,36 +19,18 @@ const products = () => {
       <div className="flex flex-col justify-between">
         <div className="">navigation</div>
         <div className="border-slate-800 w-full border-2 rounded-xl overflow-auto h-[50vh] mx-auto grid vs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[5%]">
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
-          <PrimaryCard />
+          {products.map((product) => {
+            return (
+                <PrimaryCard
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  price={product.price}
+                  src={product.imgSrc}
+                />
+              
+            );
+          })}
         </div>
       </div>
       <div>Buttons</div>
@@ -54,4 +38,4 @@ const products = () => {
   );
 };
 
-export default products;
+export default productsPage;
