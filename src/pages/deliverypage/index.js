@@ -1,11 +1,11 @@
-import Header from "@/components/header/Header"
+// import Header from "../../components/Header"
 import Link from "next/link"
 
 const index = () => {
   return (
-    <main className="w-96 h-screen  bg-slate-50 flex justify-evenly items-center flex-col">
-       <div className="text-center">
-          <Header></Header>
+    <main className="h-screen  bg-yellow-300 flex justify-evenly items-center flex-col">
+       <div className="flex justify-between items-center">
+          {/* <Header className="text-emerald-700">amn</Header> */}
        </div>
 
        <div className="w-72 text-left">
