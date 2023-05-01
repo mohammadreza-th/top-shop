@@ -1,4 +1,4 @@
-import { Layout, PrimaryCard, Input } from "@/components";
+import { Layout, PrimaryCard, Input, Title } from "@/components";
 import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
 const productsPage = () => {
   const products = fakeProductMaker(50);
@@ -12,10 +12,10 @@ const productsPage = () => {
       }
     >
       <div className="min-h-screen bg-neutral-100 p-10 flex flex-col justify-between">
-        <div className="text-7xl">
+        <Title className="text-7xl">
           Delicious <br />
           food for you
-        </div>
+        </Title>
         <Input placeholder="search ..." type="text" />
         <div className="flex flex-col justify-between">
           <div className="">navigation</div>

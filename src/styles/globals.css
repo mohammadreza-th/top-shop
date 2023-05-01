@@ -55,7 +55,7 @@
 }
 
 body {
-  font-family: SFProText;
+  font-family: SFProRounded;
 
   color: rgb(var(--foreground-rgb));
 }
