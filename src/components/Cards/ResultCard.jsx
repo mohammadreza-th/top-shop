@@ -1,4 +1,3 @@
-console.log(Math.round(0.3));
 const ResultCard = ({ src, title, price }) => {
   return (
     <div className="relative flex flex-col items-center mt-14 mx-auto rounded-2xl bg-white h-[110px] w-[100px] ">

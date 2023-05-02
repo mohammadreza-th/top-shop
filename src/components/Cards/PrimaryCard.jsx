@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-console.log(Math.round(Math.random() * 13));
 const PrimaryCard = ({ id,title, price, src }) => {
   return (
    <Link href={`products/${id}`}>
@@ -11,6 +10,7 @@ const PrimaryCard = ({ id,title, price, src }) => {
           height={150}
           src={src ? src : `/images/${Math.round(Math.random() * 13)}.png`}
           className="absolute block p-1 bg-red-200  -translate-y-1/2 -translate-x-1/2 top-0 left-[50%] rounded-full w-[100px] h-[100px]"
+          alt="product-Image"
         ></Image>
   
         <div className="text-center ">{title ? title : "title"}</div>

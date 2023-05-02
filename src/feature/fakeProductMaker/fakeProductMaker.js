@@ -8,6 +8,7 @@ export function fakeProductMaker(pLength) {
             title: `title_0${i }`,
             price: 300 + i * i,
             imgSrc: `/images/${i<13?i:i%13}.png`,
+            type: `/images/${i<13?i:i%13}.png`,
         })
         : products.push({
             id: i,

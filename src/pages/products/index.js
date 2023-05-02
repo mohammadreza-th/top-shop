@@ -1,7 +1,16 @@
-import { Layout, PrimaryCard, Input, Title } from "@/components";
-import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
+import { Layout, PrimaryCard, Search, Title, Nav, Space } from "@/components";
+import { useEffect, useState } from "react";
+
 const productsPage = () => {
-  const products = fakeProductMaker(50);
+  const [products, setProducts] = useState([]);
+  const sendRequest = async () => {
+    const response = await fetch("http://localhost:8000/products");
+    const responseData = await response.json();
+    setProducts(...responseData);
+  };
+  useEffect(() => {
+    sendRequest();
+  }, []);
   return (
     <Layout
       header={
@@ -16,10 +25,12 @@ const productsPage = () => {
           Delicious <br />
           food for you
         </Title>
-        <Input placeholder="search ..." type="text" />
+        <Space size={5}/>
+        <Search />
+        <Space size={3}/>
         <div className="flex flex-col justify-between">
-          <div className="">navigation</div>
-          <div className="border-slate-800 w-full border-2 rounded-xl overflow-auto h-[50vh] mx-auto grid vs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[5%]">
+          <Nav className="" />
+          <div className=" w-full border-2 mx-auto grid vs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-[5%]">
             {products.map((product) => {
               return (
                 <PrimaryCard

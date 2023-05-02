@@ -13,8 +13,7 @@ export const counterSlice = createSlice({
     },
     decrement: state =>{
         state.value--;
-    },
-    typer:() =>{console.log("this is a test")}
+    }
   },
 });
 
