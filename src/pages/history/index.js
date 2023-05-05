@@ -1,4 +1,4 @@
-import {Header,NoResult,Layout,StartOrderingButton} from "@/components"
+import {Header,NoResult,Layout, Button} from "@/components"
 
 const history = () => {
   return (
@@ -7,7 +7,7 @@ const history = () => {
         <Header>History</Header>
         <div className="flex-col justify-center items-center bg-white">
           <NoResult />
-          <StartOrderingButton />
+          <Button type="primary">start ordering</Button>
         </div>
       </Layout>
     </>
