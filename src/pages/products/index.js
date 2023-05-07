@@ -17,13 +17,13 @@ const productsPage = () => {
   // console.log(JSON.stringify(fakeProductMaker(50)))
   const [products, setProducts] = useState([]);
   const [filteredP, setFilteredP] = useState([]);
-  const [searchText , setSearchText] = useState([])
+  const [searchText, setSearchText] = useState([]);
   const handleFilter = (type) => {
     setFilteredP(products.filter((product) => product.type === type));
   };
-  const searchedProducts = products.filter((product) => product.title.includes(searchText))
-
-
+  const searchedProducts = products.filter((product) =>
+    product.title.includes(searchText)
+  );
 
   const sendRequest = async () => {
     const response = await fetch("http://localhost:8000/products/");
@@ -73,29 +73,26 @@ const productsPage = () => {
         />
         <Space size={3} />
         <div className="flex flex-col justify-between">
-          {searchedProducts?jsdfj:jsdlfj}
-          <>
-            <Nav
-              onfilter={(e) => {
-                handleFilter(e.target.innerText);
-              }}
-              className=""
-            />
-            <Space size={10} />
-            <div className=" w-full mb-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-y-14 gap-x-4">
-              {filteredP.map((product) => {
-                return (
-                  <PrimaryCard
-                    key={product.id}
-                    id={product.id}
-                    title={product.title}
-                    price={product.price}
-                    src={product.imgSrc}
-                  />
-                );
-              })}
-            </div>
-          </>
+          <Nav
+            onfilter={(e) => {
+              handleFilter(e.target.innerText);
+            }}
+            className=""
+          />
+          <Space size={10} />
+          <div className=" w-full mb-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-y-14 gap-x-4">
+            {filteredP.map((product) => {
+              return (
+                <PrimaryCard
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  price={product.price}
+                  src={product.imgSrc}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <ButtonsNav></ButtonsNav>
