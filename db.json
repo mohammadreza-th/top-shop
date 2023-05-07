@@ -1,261 +1,354 @@
 {
   "Products": [
-    [
-      { "id": 1, "title": "title_01", "price": 301, "imgSrc": "/images/1.png" },
-      { "id": 2, "title": "title_02", "price": 304, "imgSrc": "/images/2.png" },
-      { "id": 3, "title": "title_03", "price": 309, "imgSrc": "/images/3.png" },
-      { "id": 4, "title": "title_04", "price": 316, "imgSrc": "/images/4.png" },
-      { "id": 5, "title": "title_05", "price": 325, "imgSrc": "/images/5.png" },
-      { "id": 6, "title": "title_06", "price": 336, "imgSrc": "/images/6.png" },
-      { "id": 7, "title": "title_07", "price": 349, "imgSrc": "/images/7.png" },
-      { "id": 8, "title": "title_08", "price": 364, "imgSrc": "/images/8.png" },
-      { "id": 9, "title": "title_9", "price": 381, "imgSrc": "/images/9.png" },
-      {
-        "id": 10,
-        "title": "title_10",
-        "price": 400,
-        "imgSrc": "/images/10.png"
-      },
-      {
-        "id": 11,
-        "title": "title_11",
-        "price": 421,
-        "imgSrc": "/images/11.png"
-      },
-      {
-        "id": 12,
-        "title": "title_12",
-        "price": 444,
-        "imgSrc": "/images/12.png"
-      },
-      {
-        "id": 13,
-        "title": "title_13",
-        "price": 469,
-        "imgSrc": "/images/0.png"
-      },
-      {
-        "id": 14,
-        "title": "title_14",
-        "price": 496,
-        "imgSrc": "/images/1.png"
-      },
-      {
-        "id": 15,
-        "title": "title_15",
-        "price": 525,
-        "imgSrc": "/images/2.png"
-      },
-      {
-        "id": 16,
-        "title": "title_16",
-        "price": 556,
-        "imgSrc": "/images/3.png"
-      },
-      {
-        "id": 17,
-        "title": "title_17",
-        "price": 589,
-        "imgSrc": "/images/4.png"
-      },
-      {
-        "id": 18,
-        "title": "title_18",
-        "price": 624,
-        "imgSrc": "/images/5.png"
-      },
-      {
-        "id": 19,
-        "title": "title_19",
-        "price": 661,
-        "imgSrc": "/images/6.png"
-      },
-      {
-        "id": 20,
-        "title": "title_20",
-        "price": 700,
-        "imgSrc": "/images/7.png"
-      },
-      {
-        "id": 21,
-        "title": "title_21",
-        "price": 741,
-        "imgSrc": "/images/8.png"
-      },
-      {
-        "id": 22,
-        "title": "title_22",
-        "price": 784,
-        "imgSrc": "/images/9.png"
-      },
-      {
-        "id": 23,
-        "title": "title_23",
-        "price": 829,
-        "imgSrc": "/images/10.png"
-      },
-      {
-        "id": 24,
-        "title": "title_24",
-        "price": 876,
-        "imgSrc": "/images/11.png"
-      },
-      {
-        "id": 25,
-        "title": "title_25",
-        "price": 925,
-        "imgSrc": "/images/12.png"
-      },
-      {
-        "id": 26,
-        "title": "title_26",
-        "price": 976,
-        "imgSrc": "/images/0.png"
-      },
-      {
-        "id": 27,
-        "title": "title_27",
-        "price": 1029,
-        "imgSrc": "/images/1.png"
-      },
-      {
-        "id": 28,
-        "title": "title_28",
-        "price": 1084,
-        "imgSrc": "/images/2.png"
-      },
-      {
-        "id": 29,
-        "title": "title_29",
-        "price": 1141,
-        "imgSrc": "/images/3.png"
-      },
-      {
-        "id": 30,
-        "title": "title_30",
-        "price": 1200,
-        "imgSrc": "/images/4.png"
-      },
-      {
-        "id": 31,
-        "title": "title_31",
-        "price": 1261,
-        "imgSrc": "/images/5.png"
-      },
-      {
-        "id": 32,
-        "title": "title_32",
-        "price": 1324,
-        "imgSrc": "/images/6.png"
-      },
-      {
-        "id": 33,
-        "title": "title_33",
-        "price": 1389,
-        "imgSrc": "/images/7.png"
-      },
-      {
-        "id": 34,
-        "title": "title_34",
-        "price": 1456,
-        "imgSrc": "/images/8.png"
-      },
-      {
-        "id": 35,
-        "title": "title_35",
-        "price": 1525,
-        "imgSrc": "/images/9.png"
-      },
-      {
-        "id": 36,
-        "title": "title_36",
-        "price": 1596,
-        "imgSrc": "/images/10.png"
-      },
-      {
-        "id": 37,
-        "title": "title_37",
-        "price": 1669,
-        "imgSrc": "/images/11.png"
-      },
-      {
-        "id": 38,
-        "title": "title_38",
-        "price": 1744,
-        "imgSrc": "/images/12.png"
-      },
-      {
-        "id": 39,
-        "title": "title_39",
-        "price": 1821,
-        "imgSrc": "/images/0.png"
-      },
-      {
-        "id": 40,
-        "title": "title_40",
-        "price": 1900,
-        "imgSrc": "/images/1.png"
-      },
-      {
-        "id": 41,
-        "title": "title_41",
-        "price": 1981,
-        "imgSrc": "/images/2.png"
-      },
-      {
-        "id": 42,
-        "title": "title_42",
-        "price": 2064,
-        "imgSrc": "/images/3.png"
-      },
-      {
-        "id": 43,
-        "title": "title_43",
-        "price": 2149,
-        "imgSrc": "/images/4.png"
-      },
-      {
-        "id": 44,
-        "title": "title_44",
-        "price": 2236,
-        "imgSrc": "/images/5.png"
-      },
-      {
-        "id": 45,
-        "title": "title_45",
-        "price": 2325,
-        "imgSrc": "/images/6.png"
-      },
-      {
-        "id": 46,
-        "title": "title_46",
-        "price": 2416,
-        "imgSrc": "/images/7.png"
-      },
-      {
-        "id": 47,
-        "title": "title_47",
-        "price": 2509,
-        "imgSrc": "/images/8.png"
-      },
-      {
-        "id": 48,
-        "title": "title_48",
-        "price": 2604,
-        "imgSrc": "/images/9.png"
-      },
-      {
-        "id": 49,
-        "title": "title_49",
-        "price": 2701,
-        "imgSrc": "/images/10.png"
-      },
-      {
-        "id": 50,
-        "title": "title_50",
-        "price": 2800,
-        "imgSrc": "/images/11.png"
-      }
-    ]
+    {
+      "id": 1,
+      "title": "title_01",
+      "price": 301,
+      "imgSrc": "/images/1.png",
+      "type": "Souce"
+    },
+    {
+      "id": 2,
+      "title": "title_02",
+      "price": 304,
+      "imgSrc": "/images/2.png",
+      "type": "Other"
+    },
+    {
+      "id": 3,
+      "title": "title_03",
+      "price": 309,
+      "imgSrc": "/images/3.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 4,
+      "title": "title_04",
+      "price": 316,
+      "imgSrc": "/images/4.png",
+      "type": "Foods"
+    },
+    {
+      "id": 5,
+      "title": "title_05",
+      "price": 325,
+      "imgSrc": "/images/5.png",
+      "type": "Other"
+    },
+    {
+      "id": 6,
+      "title": "title_06",
+      "price": 336,
+      "imgSrc": "/images/6.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 7,
+      "title": "title_07",
+      "price": 349,
+      "imgSrc": "/images/7.png",
+      "type": "Foods"
+    },
+    {
+      "id": 8,
+      "title": "title_08",
+      "price": 364,
+      "imgSrc": "/images/8.png",
+      "type": "Other"
+    },
+    {
+      "id": 9,
+      "title": "title_9",
+      "price": 381,
+      "imgSrc": "/images/9.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 10,
+      "title": "title_10",
+      "price": 400,
+      "imgSrc": "/images/10.png",
+      "type": "Souce"
+    },
+    {
+      "id": 11,
+      "title": "title_11",
+      "price": 421,
+      "imgSrc": "/images/11.png",
+      "type": "Souce"
+    },
+    {
+      "id": 12,
+      "title": "title_12",
+      "price": 444,
+      "imgSrc": "/images/12.png",
+      "type": "Foods"
+    },
+    {
+      "id": 13,
+      "title": "title_13",
+      "price": 469,
+      "imgSrc": "/images/3.png",
+      "type": "Other"
+    },
+    {
+      "id": 14,
+      "title": "title_14",
+      "price": 496,
+      "imgSrc": "/images/4.png",
+      "type": "Souce"
+    },
+    {
+      "id": 15,
+      "title": "title_15",
+      "price": 525,
+      "imgSrc": "/images/5.png",
+      "type": "Souce"
+    },
+    {
+      "id": 16,
+      "title": "title_16",
+      "price": 556,
+      "imgSrc": "/images/6.png",
+      "type": "Other"
+    },
+    {
+      "id": 17,
+      "title": "title_17",
+      "price": 589,
+      "imgSrc": "/images/7.png",
+      "type": "Souce"
+    },
+    {
+      "id": 18,
+      "title": "title_18",
+      "price": 624,
+      "imgSrc": "/images/8.png",
+      "type": "Souce"
+    },
+    {
+      "id": 19,
+      "title": "title_19",
+      "price": 661,
+      "imgSrc": "/images/9.png",
+      "type": "Other"
+    },
+    {
+      "id": 20,
+      "title": "title_20",
+      "price": 700,
+      "imgSrc": "/images/10.png",
+      "type": "Souce"
+    },
+    {
+      "id": 21,
+      "title": "title_21",
+      "price": 741,
+      "imgSrc": "/images/11.png",
+      "type": "Foods"
+    },
+    {
+      "id": 22,
+      "title": "title_22",
+      "price": 784,
+      "imgSrc": "/images/1.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 23,
+      "title": "title_23",
+      "price": 829,
+      "imgSrc": "/images/2.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 24,
+      "title": "title_24",
+      "price": 876,
+      "imgSrc": "/images/3.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 25,
+      "title": "title_25",
+      "price": 925,
+      "imgSrc": "/images/4.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 26,
+      "title": "title_26",
+      "price": 976,
+      "imgSrc": "/images/5.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 27,
+      "title": "title_27",
+      "price": 1029,
+      "imgSrc": "/images/6.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 28,
+      "title": "title_28",
+      "price": 1084,
+      "imgSrc": "/images/7.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 29,
+      "title": "title_29",
+      "price": 1141,
+      "imgSrc": "/images/8.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 30,
+      "title": "title_30",
+      "price": 1200,
+      "imgSrc": "/images/9.png",
+      "type": "Souce"
+    },
+    {
+      "id": 31,
+      "title": "title_31",
+      "price": 1261,
+      "imgSrc": "/images/10.png",
+      "type": "Other"
+    },
+    {
+      "id": 32,
+      "title": "title_32",
+      "price": 1324,
+      "imgSrc": "/images/11.png",
+      "type": "Other"
+    },
+    {
+      "id": 33,
+      "title": "title_33",
+      "price": 1389,
+      "imgSrc": "/images/1.png",
+      "type": "Foods"
+    },
+    {
+      "id": 34,
+      "title": "title_34",
+      "price": 1456,
+      "imgSrc": "/images/2.png",
+      "type": "Other"
+    },
+    {
+      "id": 35,
+      "title": "title_35",
+      "price": 1525,
+      "imgSrc": "/images/3.png",
+      "type": "Souce"
+    },
+    {
+      "id": 36,
+      "title": "title_36",
+      "price": 1596,
+      "imgSrc": "/images/4.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 37,
+      "title": "title_37",
+      "price": 1669,
+      "imgSrc": "/images/5.png",
+      "type": "Souce"
+    },
+    {
+      "id": 38,
+      "title": "title_38",
+      "price": 1744,
+      "imgSrc": "/images/6.png",
+      "type": "Foods"
+    },
+    {
+      "id": 39,
+      "title": "title_39",
+      "price": 1821,
+      "imgSrc": "/images/7.png",
+      "type": "Other"
+    },
+    {
+      "id": 40,
+      "title": "title_40",
+      "price": 1900,
+      "imgSrc": "/images/8.png",
+      "type": "Foods"
+    },
+    {
+      "id": 41,
+      "title": "title_41",
+      "price": 1981,
+      "imgSrc": "/images/9.png",
+      "type": "Other"
+    },
+    {
+      "id": 42,
+      "title": "title_42",
+      "price": 2064,
+      "imgSrc": "/images/10.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 43,
+      "title": "title_43",
+      "price": 2149,
+      "imgSrc": "/images/11.png",
+      "type": "Foods"
+    },
+    {
+      "id": 44,
+      "title": "title_44",
+      "price": 2236,
+      "imgSrc": "/images/1.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 45,
+      "title": "title_45",
+      "price": 2325,
+      "imgSrc": "/images/2.png",
+      "type": "Snacks"
+    },
+    {
+      "id": 46,
+      "title": "title_46",
+      "price": 2416,
+      "imgSrc": "/images/3.png",
+      "type": "Souce"
+    },
+    {
+      "id": 47,
+      "title": "title_47",
+      "price": 2509,
+      "imgSrc": "/images/4.png",
+      "type": "Souce"
+    },
+    {
+      "id": 48,
+      "title": "title_48",
+      "price": 2604,
+      "imgSrc": "/images/5.png",
+      "type": "Drinks"
+    },
+    {
+      "id": 49,
+      "title": "title_49",
+      "price": 2701,
+      "imgSrc": "/images/6.png",
+      "type": "Souce"
+    },
+    {
+      "id": 50,
+      "title": "title_50",
+      "price": 2800,
+      "imgSrc": "/images/7.png",
+      "type": "Foods"
+    }
   ]
 }

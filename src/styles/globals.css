@@ -56,7 +56,6 @@
 
 body {
   font-family: SFProRounded;
-
   color: rgb(var(--foreground-rgb));
 }
 
@@ -65,5 +64,5 @@ input:focus {
   outline: none;
 }
 ::-webkit-scrollbar {
-  /* display:none; */
+  display:none;
 }

@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "../Header/Header";
+import {Header, Footer} from "@/components";
 
-const Layout = ({ children, header }) => {
+
+const Layout = ({ children, header, footer }) => {
   return (
 
     <div className="h-screen">
       <Header>{header}</Header>
       <main>{children}</main>
+      {footer?<Footer>{footer}</Footer>:true}
     </div>
   );
 };

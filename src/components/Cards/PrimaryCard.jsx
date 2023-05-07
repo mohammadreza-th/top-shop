@@ -4,7 +4,7 @@ import Link from "next/link";
 const PrimaryCard = ({ id,title, price, src }) => {
   return (
    <Link href={`products/${id}`}>
-      <div className="mt-16 flex flex-col justify-center relative w-[150px] h-[170px] rounded-3xl bg-white">
+      <div className=" flex flex-col justify-center relative w-[150px] h-[170px] rounded-3xl bg-white">
         <Image
           width={150}
           height={150}
