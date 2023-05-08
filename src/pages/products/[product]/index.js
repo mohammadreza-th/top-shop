@@ -1,9 +1,9 @@
-import React from 'react'
+import { fetchData } from "../../../../lib/fetch";
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+const product = () => {
+  let url = "http://localhost:8000/products/";
+  product = fetchData(url);
+  return <div>product</div>;
+};
 
-export default index
+export default product;

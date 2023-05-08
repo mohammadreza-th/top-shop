@@ -7,6 +7,7 @@ import {
   Space,
   ButtonsNav,
 } from "@/components";
+import { fetchData } from "../../../lib/fetch";
 // import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -17,19 +18,17 @@ const productsPage = () => {
   // console.log(JSON.stringify(fakeProductMaker(50)))
   const [products, setProducts] = useState([]);
   const [filteredP, setFilteredP] = useState([]);
-  const [searchText, setSearchText] = useState([]);
+  const [searchText, setSearchText] = useState();
   const handleFilter = (type) => {
     setFilteredP(products.filter((product) => product.type === type));
   };
   const searchedProducts = products.filter((product) =>
     product.title.includes(searchText)
   );
-
   const sendRequest = async () => {
-    const response = await fetch("http://localhost:8000/products/");
-    const responseData = await response.json();
-    setProducts(responseData);
-    setFilteredP(responseData);
+    let url = "http://localhost:8000/products/";
+    setProducts(await fetchData(url));
+    setFilteredP(await fetchData(url));
   };
   useEffect(() => {
     sendRequest();
@@ -73,25 +72,41 @@ const productsPage = () => {
         />
         <Space size={3} />
         <div className="flex flex-col justify-between">
-          <Nav
-            onfilter={(e) => {
-              handleFilter(e.target.innerText);
-            }}
-            className=""
-          />
+          {!searchText ? (
+            <Nav
+              onfilter={(e) => {
+                handleFilter(e.target.innerText);
+              }}
+              className=""
+            />
+          ) : (
+            true
+          )}
           <Space size={10} />
           <div className=" w-full mb-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-y-14 gap-x-4">
-            {filteredP.map((product) => {
-              return (
-                <PrimaryCard
-                  key={product.id}
-                  id={product.id}
-                  title={product.title}
-                  price={product.price}
-                  src={product.imgSrc}
-                />
-              );
-            })}
+            {searchText
+              ? searchedProducts.map((product) => {
+                  return (
+                    <PrimaryCard
+                      key={product.id}
+                      id={product.id}
+                      title={product.title}
+                      price={product.price}
+                      src={product.imgSrc}
+                    />
+                  );
+                })
+              : filteredP.map((product) => {
+                  return (
+                    <PrimaryCard
+                      key={product.id}
+                      id={product.id}
+                      title={product.title}
+                      price={product.price}
+                      src={product.imgSrc}
+                    />
+                  );
+                })}
           </div>
         </div>
       </div>
