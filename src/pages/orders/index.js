@@ -1,22 +1,20 @@
-import {StartOrderingButton,NoOrder,Layout,Header} from "@/components"
 
+import { NoOrder, Layout, Header, Button } from "@/components";
 
-const noOrder = () => {
-  const cart = []
-  if(!cart){
-    
-  }else{
-    
-    return (
-        <Layout >
-          <Header>Orders</Header>
-          <div className="flex-col justify-center items-center bg-white">
-            <NoOrder/>
-            <StartOrderingButton />
-          </div>
-        </Layout>
-    );
-  }
+const orders = () => {
+  return (
+    <Layout>
+      <Header>Orders</Header>
+      <div className="flex-col justify-center items-center bg-white">
+        <NoOrder />
+        <Button type="primary">start ordering</Button>
+      </div>
+    </Layout>
+  );
 };
 
-export default noOrder;
+export default orders;
+
+
+
+
