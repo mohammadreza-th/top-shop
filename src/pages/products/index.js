@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const productsPage = () => {
+const ProductsPage = () => {
   //test
   // console.log(JSON.stringify(fakeProductMaker(50)))
   const [products, setProducts] = useState([]);
@@ -115,4 +115,4 @@ const productsPage = () => {
   );
 };
 
-export default productsPage;
+export default ProductsPage;
