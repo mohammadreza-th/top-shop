@@ -2,7 +2,7 @@ import { ResultCard, Input } from "@/components/";
 import Layout from "@/components/Layout/Layout";
 import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
 import { useState } from "react";
-const results = () => {
+const Results = () => {
   const [SearchValue, setSearchValue] = useState();
   const products = fakeProductMaker(12); // 4 product cards in a row.
 
@@ -28,4 +28,4 @@ const results = () => {
   );
 };
 
-export default results;
+export default Results;
