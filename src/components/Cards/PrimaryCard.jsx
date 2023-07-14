@@ -8,7 +8,7 @@ const PrimaryCard = ({ id,title, price, src }) => {
         <Image
           width={150}
           height={150}
-          src={src ? src : `/images/${Math.round(Math.random() * 13)}.png`}
+          src={src ? src[0] : `/images/${Math.round(Math.random() * 13)}.png`}
           className="absolute block p-1 bg-red-200  -translate-y-1/2 -translate-x-1/2 top-0 left-[50%] rounded-full w-[100px] h-[100px]"
           alt="product-Image"
         ></Image>

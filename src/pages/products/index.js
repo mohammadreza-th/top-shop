@@ -7,32 +7,32 @@ import {
   Space,
   ButtonsNav,
 } from "@/components";
-import { fetchData } from "../../../lib/fetch";
-// import { fakeProductMaker } from "@/feature/fakeProductMaker/fakeProductMaker";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductsPage = () => {
-  //test
-  // console.log(JSON.stringify(fakeProductMaker(50)))
-  const [products, setProducts] = useState([]);
-  const [filteredP, setFilteredP] = useState([]);
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:8000/products/");
+  const repo = await res.json();
+  return { props: { repo } };
+};
+const ProductsPage = ({ repo }) => {
+  const [products, setProducts] = useState(repo);
   const [searchText, setSearchText] = useState();
   const handleFilter = (type) => {
-    setFilteredP(products.filter((product) => product.type === type));
+    if (type === "All") {
+      setProducts(repo);
+    } else {
+      setProducts(repo.filter((product) => product.type === type));
+    }
   };
-  const searchedProducts = products.filter((product) =>
-    product.title.includes(searchText)
-  );
-  const sendRequest = async () => {
-    let url = "http://localhost:8000/products/";
-    setProducts(await fetchData(url));
-    setFilteredP(await fetchData(url));
-  };
-  useEffect(() => {
-    sendRequest();
-  }, []);
+  let searchedProducts = products;
+  if (searchText) {
+    searchedProducts = products.filter((product) =>
+      product.title.includes(searchText)
+    );
+  }
+
   return (
     <Layout
       header={
@@ -72,41 +72,26 @@ const ProductsPage = () => {
         />
         <Space size={3} />
         <div className="flex flex-col justify-between">
-          {!searchText ? (
-            <Nav
-              onfilter={(e) => {
-                handleFilter(e.target.innerText);
-              }}
-              className=""
-            />
-          ) : (
-            true
-          )}
+          <Nav
+            onfilter={(e) => {
+              handleFilter(e.target.innerText);
+            }}
+            className=""
+          />
+
           <Space size={10} />
           <div className=" w-full mb-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-y-14 gap-x-4">
-            {searchText
-              ? searchedProducts.map((product) => {
-                  return (
-                    <PrimaryCard
-                      key={product.id}
-                      id={product.id}
-                      title={product.title}
-                      price={product.price}
-                      src={product.imgSrc}
-                    />
-                  );
-                })
-              : filteredP.map((product) => {
-                  return (
-                    <PrimaryCard
-                      key={product.id}
-                      id={product.id}
-                      title={product.title}
-                      price={product.price}
-                      src={product.imgSrc}
-                    />
-                  );
-                })}
+            {searchedProducts.map((product) => {
+              return (
+                <PrimaryCard
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  price={product.price}
+                  src={product.imgSrc}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

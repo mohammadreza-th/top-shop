@@ -1,28 +1,36 @@
-import { useState } from "react"
-
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment  } from "@/feature/counter/counterSlice";
 
 const Counter = () => {
-    const [counter,setCounter]=useState(0)
-    const PlusClickHandler=()=>{
-        setCounter(counter+1)
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch();
+
+  const PlusClickHandler = () => {
+    dispatch(increment());
+  };
+  const MinusClickHandler = () => {
+    if (count !== 0) {
+      dispatch(decrement());
+    } else {
+      return;
     }
-    const MinusClickHandler=()=>{
-        if(counter!==0){
-            setCounter(counter-1)
-            
-        }else{
-            return
-        }
-        
-    }
+  };
 
   return (
     <div className="flex justify-evenly rounded-2xl	 text-lg items-center w-16 h-5 bg-orange-600">
-        <button onClick={MinusClickHandler} className="text-white text-xl">-</button>
-         <div className="text-white">{counter}</div>
-        <button onClick={PlusClickHandler} className="text-white  text-xl scale-90">+</button>
+      <button onClick={MinusClickHandler} className="text-white text-xl">
+        -
+      </button>
+      <div className="text-white">{count}</div>
+      <button
+        onClick={PlusClickHandler}
+        className="text-white  text-xl scale-90"
+      >
+        +
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

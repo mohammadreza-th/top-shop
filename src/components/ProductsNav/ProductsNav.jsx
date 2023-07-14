@@ -3,6 +3,7 @@ const ProductsNav = ({ onfilter }) => {
   return (
     <Tabs isManual isFitted colorScheme="red" align="center">
       <TabList>
+        <Tab onClick={onfilter}>All</Tab>
         <Tab onClick={onfilter}>Foods</Tab>
         <Tab onClick={onfilter}>Drinks</Tab>
         <Tab onClick={onfilter}>Souce</Tab>

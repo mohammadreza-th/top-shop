@@ -4,7 +4,7 @@ const ResultCard = ({ src, title, price }) => {
       <img
         className="absolute left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-full
          bg-gradient-to-r from-red-300 to-red-50 w-[75px] aspect-square p-1"
-        src={src ? src : `/images/${Math.round(Math.random() * 13)}.png`}
+        src={src ? src[0] : `/images/${Math.round(Math.random() * 13)}.png`}
         alt=""
       />
       <div className="mt-[40px]">{title ? title : "title"}</div>
