@@ -1,7 +1,7 @@
 import Counter from "../counter/Counter"
 import Image from "next/image"
-// import img from "../../../public/images/imgcard"
 const Porductcart = ({title,img}) => {
+
   return (
     <div className="w-72  h-20  flex justify-between bg-white shadow-md rounded-xl  my-1">
         <div className="flex justify-center items-center w-1/4 h-full">

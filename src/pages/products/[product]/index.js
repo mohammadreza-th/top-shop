@@ -1,24 +1,52 @@
-import { Header } from "@/components";
-import { fetchData } from "../../../../lib/fetch";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import {
+  Button,
+  Header,
+  DliveryInfo,
+  ReturnPolicy,
+  Space,
+  ProductCard,
+} from "@/components";
 
-const ProductPage = () => {
-  const [product, setProduct] = useState([]);
-  const router = useRouter();
-  const segment = router.query.product
-  let url = `http://localhost:8000/products/${segment}`;
-  console.log("url:",url)
-  const sendRequest = async () => {
-    setProduct(await fetchData(url));
+export const getProdocts = async () => {
+  const res = await fetch("http://localhost:8000/products/");
+  const products = await res.json();
+  return products;
+};
+
+export const getStaticPaths = async () => {
+  const products = await getProdocts();
+  const ids = products.map((product) => product.id);
+  const params = ids.map((id) => ({ params:{product:`${id}`}  }));
+  return {
+    paths: params,
+    fallback: true, // false or "blocking"
   };
-  useEffect(() => {
-    sendRequest();
-  }, []);
-  console.log(product);
+};
+
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const productId = params.product;
+  const res = await fetch(`http://localhost:8000/products/${productId}`);
+  const product = await res.json();
+  return { props: { product } };
+};
+
+const ProductPage = ({ product }) => {
   return (
-    <div>
+    <div className="md:mx-[10vw]">
       <Header></Header>
+      <Space size={3}></Space>
+      <ProductCard
+        src={product.imgSrc}
+        title={product.title}
+        price={product.price}
+      ></ProductCard>
+      <Space size={7}></Space>
+      <DliveryInfo></DliveryInfo>
+      <Space size={3}></Space>
+      <ReturnPolicy></ReturnPolicy>
+      <Space size={3}></Space>
+      <Button type="primary">add to cart</Button>
     </div>
   );
 };

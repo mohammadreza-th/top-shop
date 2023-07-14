@@ -1,4 +1,3 @@
-
 const Button = ({ children, type }) => {
   if (type === "primary") {
     return (
@@ -7,7 +6,9 @@ const Button = ({ children, type }) => {
       // </button>
       <div class="flex bg-white">
         <div class="m-auto">
-          <button class="bg-red-500 hover:bg-gray-300 text-white font-bold  rounded-full w-80 h-16">{children}</button>
+          <button class="bg-red-500 hover:bg-gray-300 text-white font-bold  rounded-full w-80 h-16">
+            {children}
+          </button>
         </div>
       </div>
     );
@@ -18,7 +19,9 @@ const Button = ({ children, type }) => {
       // </button>
       <div class="flex ">
         <div class="m-auto">
-          <button class="bg-white hover:bg-gray-300 text-red-500 font-bold  rounded-full w-80 h-16">{children}</button>
+          <button class="bg-white hover:bg-gray-300 text-red-500 font-bold  rounded-full w-80 h-16">
+            {children}
+          </button>
         </div>
       </div>
     );
