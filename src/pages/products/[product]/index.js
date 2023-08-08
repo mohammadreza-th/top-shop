@@ -6,28 +6,29 @@ import {
   Space,
   ProductCard,
 } from "@/components";
+import axios from "axios";
+import { getData } from "../../../../lib/fetch";
 
-export const getProdocts = async () => {
-  const res = await fetch("http://localhost:8000/products/");
-  const products = await res.json();
-  return products;
-};
 
+//nextjs built in SSR rendering function 
 export const getStaticPaths = async () => {
-  const products = await getProdocts();
+  const products = await getData(`${process.env.base_url}/products/`);
   const ids = products.map((product) => product.id);
-  const params = ids.map((id) => ({ params:{product:`${id}`}  }));
+  const params = ids.map((id) => ({ params: { product: `${id}` } }));
   return {
     paths: params,
     fallback: true, // false or "blocking"
   };
 };
 
+//nextjs built in SSR rendering function for dynamic pages
 export const getStaticProps = async (context) => {
   const { params } = context;
   const productId = params.product;
-  const res = await fetch(`http://localhost:8000/products/${productId}`);
-  const product = await res.json();
+  const res = await axios(
+    `${process.env.base_url}/products/${productId}`
+  );
+  const product = await res.data;
   return { props: { product } };
 };
 
