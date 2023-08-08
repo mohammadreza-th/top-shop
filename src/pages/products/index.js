@@ -10,20 +10,22 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getData } from "../../../lib/fetch";
 
+//nextjs built in SSR rendering function 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:8000/products/");
-  const repo = await res.json();
-  return { props: { repo } };
+  const data = await getData(`${process.env.base_url}/products/`);
+  return { props: { data } };
 };
-const ProductsPage = ({ repo }) => {
-  const [products, setProducts] = useState(repo);
+
+const ProductsPage = ({ data }) => {
+  const [products, setProducts] = useState(data);
   const [searchText, setSearchText] = useState();
   const handleFilter = (type) => {
     if (type === "All") {
-      setProducts(repo);
+      setProducts(data);
     } else {
-      setProducts(repo.filter((product) => product.type === type));
+      setProducts(data.filter((product) => product.type === type));
     }
   };
   let searchedProducts = products;

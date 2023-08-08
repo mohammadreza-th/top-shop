@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
+    
 const Slider = ({ children, SP, className }) => {
   return (
     <div className={className}>

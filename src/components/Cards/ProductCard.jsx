@@ -16,7 +16,6 @@ const ProductCard = ({ title, price, src }) => {
           width={500}
           height={500}
           src={source}
-          // className="md:rounded-l-xl max-vs:bottom-[-50%] max-md:opacity-[85%] block p-1 bg-red-100 rounded-full right-0 min-w-[100px] w-[50vw] max-w-[300px] aspect-square"
           className="aspect-square p-3"
           alt="product-Image"
           ></Image>
@@ -24,16 +23,7 @@ const ProductCard = ({ title, price, src }) => {
         
       }
         
-          {/* : (
-          <Image
-            width={500}
-            height={500}
-            src={`/images/background.png`}
-            // className="md:rounded-l-xl max-vs:bottom-[-50%] max-md:opacity-[85%] block p-1 bg-red-100 rounded-full right-0 min-w-[100px] w-[50vw] max-w-[300px] aspect-square"
-            className="my-12 p-3"
-            alt="product-Image"
-          ></Image>
-        ) */}
+          
       </Slider>
       <H3 className="text-white">
         <span className="text-red-300">Title: </span>
